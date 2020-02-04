@@ -128,9 +128,9 @@ let deleteUser = (req, res) => {
     })
 }
 
-let getUserById = async(req, res) => {
+let getUserById = (req, res) => {
     let id = req.params.id;
-    const user = await User.findById(id);
+    const user = User.findById(id);
     res.status(201).json({ user });
 }
 
