@@ -11,13 +11,10 @@ let eventSchema = new Schema({
         minlength: 5,
         maxlength: 50
     },
-    dateStart: {
+    date: {
         type: Date,
-        required: true
-    },
-    dateEnd: {
-        type: Date,
-        required: true
+        required: true,
+        default: new Date()
     },
     description: {
         type: String

@@ -12,8 +12,7 @@ let postEvent = (req, res) => {
 
     let event = new Event({
         name: body.name,
-        dateStart: new Date(body.dateStart),
-        dateEnd: new Date(body.dateEnd),
+        dateStart: new Date(body.date),
         description: body.description,
         url: body.url,
     });
