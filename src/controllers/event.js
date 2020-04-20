@@ -11,7 +11,9 @@ let postEvent = (req, res) => {
     let body = req.body;
 
     let event = new Event({
-        name: body.name,
+        song: body.song,
+        artist: body.artist,
+        festival: body.festival,
         dateStart: new Date(body.date),
         description: body.description,
         url: body.url,
@@ -64,7 +66,7 @@ let getEvents = (req, res) => {
  */
 let updateEvent = (req, res) => {
     let id = req.params.id;
-    let body = _.pick(req.body, ['name', 'description']);
+    let body = _.pick(req.body, ['song', 'description','artist', 'festival']);
 
     Event.findByIdAndUpdate(id, body, { new: true, runValidators: true }, (err, eventDB) => {
         if (err) {
