@@ -5,11 +5,19 @@ let uniqueValidator = require('mongoose-unique-validator');
 let Schema = mongoose.Schema;
 
 let eventSchema = new Schema({
-    name: {
+    song: {
         type: String,
         required: [true, "event name is required"],
         minlength: 5,
         maxlength: 50
+    },
+    artist: {
+        type: String,
+        required: true,
+    },
+    festival: {
+        type: String,
+        required: true,
     },
     date: {
         type: Date,
