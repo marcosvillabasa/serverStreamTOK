@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 })
 
 // habilitar public
-app.use(express.static(path.resolve(__dirname, '../public')));
+app.use(express.static(path.resolve(__dirname, '../client')));
 
 mongoose.connect('mongodb://localhost:27017/streamtok', { useNewUrlParser: true });
 
