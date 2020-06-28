@@ -1,2 +1,0 @@
-(this.webpackJsonpstreamtok=this.webpackJsonpstreamtok||[]).push([[4],{108:function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return c}));var r=n(0),a=n.n(r);function c(t){return a.a.createElement("div",{style:{color:"white"}},a.a.createElement("p",null,"EVENTOS"),a.a.createElement("p",null,"En Construcci\xf3n"))}}}]);
-//# sourceMappingURL=4.72661e45.chunk.js.map
