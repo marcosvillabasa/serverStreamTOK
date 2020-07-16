@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 })
 
 // habilitar public
-app.use(express.static(path.resolve(__dirname, '../client')));
+app.use(express.static(path.resolve(__dirname, '../client'), {redirect:false}));
 
 mongoose.connect('mongodb://localhost:27017/streamtok', { useNewUrlParser: true });
 
@@ -33,6 +33,10 @@ mongoose.connect('mongodb://localhost:27017/streamtok', { useNewUrlParser: true 
 app.use(config.endpoint, require('./routes/user'));
 app.use(config.endpoint, require('./routes/event'));
 app.use(config.endpoint, require('./routes/login'));
+
+app.get('*',(req,res,next) => {
+    res.sendFile(path.resolve('client/index.html'))
+})
 
 app.listen(config.port, () => {
     console.log(`Listening port ${config.port}`);
