@@ -31,6 +31,7 @@ mongoose.connect('mongodb://localhost:27017/streamtok', { useNewUrlParser: true 
 
 //routes
 app.use(config.endpoint, require('./routes/user'));
+app.use(config.endpoint, require('./routes/channel'));
 app.use(config.endpoint, require('./routes/event'));
 app.use(config.endpoint, require('./routes/login'));
 
